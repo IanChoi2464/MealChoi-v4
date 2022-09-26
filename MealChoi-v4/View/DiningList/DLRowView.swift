@@ -35,7 +35,7 @@ struct DLRowView:View{
             }
             .padding(.leading)
         }
-        .padding([.leading, .bottom, .trailing], 10.0)
+        .padding([.leading,.bottom,.trailing],10.0)
     }
 }
 

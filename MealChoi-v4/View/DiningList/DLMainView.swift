@@ -13,10 +13,16 @@ struct DLMainView:View{
                         LazyVStack{
                             ForEach(model1.dinings.indices,id:\.self){index in
                                 let diningName=model1.dinings[index]["name"] as! String
-                                //let today=model1.dinings[index]["220920"] as! Dictionary<String,Any>
+                                //let today=model1.dinings[index]["220924"] as! Dictionary<String,Any>
                                 let today=model1.dinings[index][Services.getDate_str(date:Date(),format:"yyMMdd")] as! Dictionary<String,Any>
                                 let mealTime=Services.getMealTime(numOfMeals:today["numOfMeals"] as? Int ?? 0)
                                 let openHours=today["openHours"] as? [String] ?? ["Closed Today"]
+                                if(index==6){
+                                    Text("Cafe")
+                                        .font(Font.custom("NovaOval",size:35))
+                                        .frame(maxWidth:.infinity,alignment:.leading)
+                                        .padding(.leading,15)
+                                }
                                 NavigationLink(
                                     destination:MLMainView(mealTime:mealTime,today:today,diningName:diningName)
                                 ){
