@@ -39,6 +39,7 @@ struct DLRowView:View{
     }
 }
 
+
 struct DLRowView_Previews:PreviewProvider{
     static var previews:some View{
         DLRowView(diningName:"John Jay",openHours:["10:03am - 10:04am"])
