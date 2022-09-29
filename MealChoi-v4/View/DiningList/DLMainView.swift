@@ -2,7 +2,6 @@ import SwiftUI
 
 struct DLMainView:View{
     @EnvironmentObject var model1:DiningModel
-    @EnvironmentObject var model2:EtcModel
     @State var showSideMenu=false
     var body:some View{
         NavigationView{
@@ -13,6 +12,7 @@ struct DLMainView:View{
                         LazyVStack{
                             ForEach(model1.dinings.indices,id:\.self){index in
                                 let diningName=model1.dinings[index]["name"] as! String
+                                let menuInfos=model1.dinings[index]["menuInfos"] as? Dictionary<String,Any> ?? ["":""]
                                 //let today=model1.dinings[index]["220924"] as! Dictionary<String,Any>
                                 let today=model1.dinings[index][Services.getDate_str(date:Date(),format:"yyMMdd")] as! Dictionary<String,Any>
                                 let mealTime=Services.getMealTime(numOfMeals:today["numOfMeals"] as? Int ?? 0)
@@ -24,7 +24,7 @@ struct DLMainView:View{
                                         .padding(.leading,15)
                                 }
                                 NavigationLink(
-                                    destination:MLMainView(mealTime:mealTime,today:today,diningName:diningName)
+                                    destination:MLMainView(mealTime:mealTime,today:today,menuInfos:menuInfos,diningName:diningName)
                                 ){
                                     DLRowView(diningName:diningName,openHours:openHours)
                                 }
@@ -65,6 +65,5 @@ struct DLMainView_Previews:PreviewProvider{
     static var previews:some View{
         DLMainView()
             .environmentObject(DiningModel())
-            .environmentObject(EtcModel())
     }
 }

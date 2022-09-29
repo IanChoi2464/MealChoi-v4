@@ -3,11 +3,11 @@ import SwiftUI
 struct MDMainView:View{
     @Binding var isShowing:Bool
     let whichMenu:String
-    let calories:String
     let showGf:Bool
+    let showHal:Bool
     let showVegan:Bool
     let showVegetarian:Bool
-    let showHal:Bool
+    let showBal:Bool
     let curHeight:CGFloat
     var body:some View{
         ZStack(alignment:.bottom){
@@ -31,17 +31,11 @@ struct MDMainView:View{
             Text(whichMenu)
                 .font(.system(size:25,weight:.semibold))
             DividerView()
-            HStack(spacing:0){
-                Text("Calories: ")
-                Text(calories)
-                    .fontWeight(.bold)
-                if(calories != "No Information"){
-                    Text(" kcal per 100g")
-                }
-            }
-            .font(Font.custom("Montserrat",size:18))
             if(showGf){
                 MDIconView(icon:"Gluten Free")
+            }
+            if(showHal){
+                MDIconView(icon:"Halal")
             }
             if(showVegan){
                 MDIconView(icon:"Vegan")
@@ -49,8 +43,8 @@ struct MDMainView:View{
             if(showVegetarian){
                 MDIconView(icon:"Vegetarian")
             }
-            if(showHal){
-                MDIconView(icon:"Halal")
+            if(showBal){
+                MDIconView(icon:"Balanced Nutrients")
             }
             Spacer()
         }

@@ -10,7 +10,7 @@ import Firebase
 
 @main
 struct MealChoi_v4App:App{
-    @UIApplicationDelegateAdaptor var delegate: MyAppDelegate
+    @UIApplicationDelegateAdaptor var delegate:MyAppDelegate
     init(){
         FirebaseApp.configure()
     }
@@ -18,7 +18,6 @@ struct MealChoi_v4App:App{
         WindowGroup{
             RootView()
                 .environmentObject(DiningModel())
-                .environmentObject(EtcModel())
         }
     }
 }

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>80214814884-7f845427aiucf1dd3h3ojeng0crrl6a9.apps.googleusercontent.com</string>
+	<string>311920338798-vr0c3n59l6i4u7fs4qcsibleheul2iv6.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.80214814884-7f845427aiucf1dd3h3ojeng0crrl6a9</string>
+	<string>com.googleusercontent.apps.311920338798-vr0c3n59l6i4u7fs4qcsibleheul2iv6</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBomjS71ct2UOvAOKMq4sF4immhOCnHa40</string>
+	<string>AIzaSyCbqy950Iv03jmvqgvwWlT20JQRq-tAdiU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>80214814884</string>
+	<string>311920338798</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Choi.MealChoi</string>
 	<key>PROJECT_ID</key>
-	<string>mealchoi-b6e17</string>
+	<string>mealchoi-db</string>
 	<key>STORAGE_BUCKET</key>
-	<string>mealchoi-b6e17.appspot.com</string>
+	<string>mealchoi-db.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:80214814884:ios:e97c63ceb9d130a44bb631</string>
-	<key>DATABASE_URL</key>
-	<string>https://mealchoi-b6e17-default-rtdb.firebaseio.com</string>
+	<string>1:311920338798:ios:72e30c325b856ce937c37f</string>
 </dict>
 </plist>

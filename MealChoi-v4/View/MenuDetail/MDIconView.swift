@@ -7,7 +7,7 @@ struct MDIconView:View{
             Image(icon)
                 .resizable()
                 .aspectRatio(contentMode:.fit)
-                .frame(width:30,height:30,alignment:.center)
+                .frame(width:35,height:35,alignment:.center)
             Text(icon)
         }
         .font(Font.custom("Montserrat",size:18))

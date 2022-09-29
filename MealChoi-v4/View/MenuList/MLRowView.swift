@@ -1,14 +1,13 @@
 import SwiftUI
 
 struct MLRowView:View{
-    @EnvironmentObject var model2:EtcModel
     @Binding var showDetails:Bool
     @Binding var whichMenu:String
     var menu:String
+    var menuInfos:Dictionary<String,Any>
     var body:some View{
         VStack(alignment:.leading){
-            let menuInfos=model2.etc[0]["menuInfos"] as! Dictionary<String,Any>
-            let menuInfo=menuInfos[menu] as? Dictionary<String,Any> ?? ["cal":"No Information","gf":false,"hal":false,"vegan":false,"vegetarian":false]
+            let menuInfo=menuInfos[menu] as? Dictionary<String,Any> ?? ["":""]
             Button{
                 showDetails=true
                 whichMenu=menu
@@ -19,30 +18,31 @@ struct MLRowView:View{
                         .multilineTextAlignment(.leading)
                     Spacer()
                     HStack{
-                        if(menuInfo["gf"] as! Bool){
+                        if(menuInfo["gf"] as? Bool ?? false){
                             Image("Gluten Free")
                                 .resizable()
-                                .frame(width:30,height:30)
+                                .frame(width:35,height:35)
                         }
-                        if(menuInfo["vegan"] as! Bool){
-                            Image("Vegan")
-                                .resizable()
-                                .frame(width:30,height:30)
-                        }
-                        if(menuInfo["vegetarian"] as! Bool){
-                            Image("Vegetarian")
-                                .resizable()
-                                .frame(width:30,height:30)
-                        }
-                        if(menuInfo["hal"] as! Bool){
+                        if(menuInfo["hal"] as? Bool ?? false){
                             Image("Halal")
                                 .resizable()
-                                .frame(width:30,height:30)
+                                .frame(width:35,height:35)
                         }
-                        Image(systemName:"questionmark.circle")
-                            .resizable()
-                            .frame(width:30,height:30)
-                            .opacity(0.7)
+                        if(menuInfo["vegan"] as? Bool ?? false){
+                            Image("Vegan")
+                                .resizable()
+                                .frame(width:35,height:35)
+                        }
+                        if(menuInfo["vegetarian"] as? Bool ?? false){
+                            Image("Vegetarian")
+                                .resizable()
+                                .frame(width:35,height:35)
+                        }
+                        if(menuInfo["bal"] as? Bool ?? false){
+                            Image("Balanced Nutrients")
+                                .resizable()
+                                .frame(width:35,height:35)
+                        }
                     }
                     .padding(.trailing,10)
                 }

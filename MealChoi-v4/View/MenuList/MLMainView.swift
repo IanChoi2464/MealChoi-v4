@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct MLMainView:View{
-    @EnvironmentObject var model2:EtcModel
     @State var mealTime:String
     @State var showDetails=false
     @State var whichMenu=""
     var today:Dictionary<String,Any>
+    var menuInfos:Dictionary<String,Any>
     var diningName:String
     var body:some View{
         let numOfMeals=today["numOfMeals"] as? Int ?? 0
@@ -57,20 +57,19 @@ struct MLMainView:View{
                     ScrollView(showsIndicators:false){
                         VStack{
                             ForEach(Array(meal.keys).indices,id:\.self){index in
-                                MLStationView(showDetails:$showDetails,whichMenu:$whichMenu,sttAndMenus:meal[String(index+1)] as! Dictionary<String,Any>)
+                                MLStationView(showDetails:$showDetails,whichMenu:$whichMenu,sttAndMenus:meal[String(index+1)] as! Dictionary<String,Any>,menuInfos:menuInfos)
                             }
                         }
                     }
                 }
-                let menuInfos=model2.etc[0]["menuInfos"] as! Dictionary<String,Any>
-                let menuInfo=menuInfos[whichMenu] as? Dictionary<String,Any> ?? ["cal":"No Information","gf":false,"hal":false,"vegan":false,"vegetarian":false]
-                let calories=menuInfo["cal"] as! String
-                let showGf=menuInfo["gf"] as! Bool
-                let showVegan=menuInfo["vegan"] as! Bool
-                let showVegetarian=menuInfo["vegetarian"] as! Bool
-                let showHal=menuInfo["hal"] as! Bool
-                let curHeight=Services.getHeight(a:showGf,b:showVegan,c:showVegetarian,d:showHal)
-                MDMainView(isShowing:$showDetails,whichMenu:whichMenu,calories:calories,showGf:showGf,showVegan:showVegan,showVegetarian:showVegetarian,showHal:showHal,curHeight:curHeight)
+                let menuInfo=menuInfos[whichMenu] as? Dictionary<String,Any> ?? ["":""]
+                let showGf=menuInfo["gf"] as? Bool ?? false
+                let showHal=menuInfo["hal"] as? Bool ?? false
+                let showVegan=menuInfo["vegan"] as? Bool ?? false
+                let showVegetarian=menuInfo["vegetarian"] as? Bool ?? false
+                let showBal=menuInfo["bal"] as? Bool ?? false
+                let curHeight=Services.getHeight(a:showGf,b:showHal,c:showVegan,d:showVegetarian,e:showBal)
+                MDMainView(isShowing:$showDetails,whichMenu:whichMenu,showGf:showGf,showHal:showHal,showVegan:showVegan,showVegetarian:showVegetarian,showBal:showBal,curHeight:curHeight)
             }
             .navigationBarTitle(diningName)
             .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)

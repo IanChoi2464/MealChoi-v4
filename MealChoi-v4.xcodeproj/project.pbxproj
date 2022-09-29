@@ -11,14 +11,12 @@
 		39602AEC28DD7C250089C4AD /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602AEB28DD7C250089C4AD /* RootView.swift */; };
 		39602AEE28DD7C280089C4AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39602AED28DD7C280089C4AD /* Assets.xcassets */; };
 		39602AF128DD7C280089C4AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39602AF028DD7C280089C4AD /* Preview Assets.xcassets */; };
-		39602AF828DD7CC40089C4AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39602AF728DD7CC40089C4AD /* GoogleService-Info.plist */; };
 		39602AFD28DD7E470089C4AD /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602AFC28DD7E470089C4AD /* Services.swift */; };
 		39602AFF28DD7F640089C4AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602AFE28DD7F640089C4AD /* Extensions.swift */; };
 		39602B0128DD7F890089C4AD /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602B0028DD7F890089C4AD /* Styles.swift */; };
 		39602B0428DD7FC90089C4AD /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39602B0328DD7FC90089C4AD /* Montserrat.ttf */; };
 		39602B0628DD7FD20089C4AD /* NovaOval.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39602B0528DD7FD20089C4AD /* NovaOval.ttf */; };
 		39602B0928DD805F0089C4AD /* DiningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602B0828DD805F0089C4AD /* DiningModel.swift */; };
-		39602B0B28DD80680089C4AD /* EtcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602B0A28DD80680089C4AD /* EtcModel.swift */; };
 		39602B1428DD81270089C4AD /* DLMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602B1328DD81270089C4AD /* DLMainView.swift */; };
 		39602B1628DD81400089C4AD /* DLHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602B1528DD81400089C4AD /* DLHeaderView.swift */; };
 		39602B1828DD814A0089C4AD /* DLRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602B1728DD814A0089C4AD /* DLRowView.swift */; };
@@ -34,6 +32,7 @@
 		39602B2C28DD81C30089C4AD /* WaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602B2B28DD81C30089C4AD /* WaitingView.swift */; };
 		39602B2E28DD81D00089C4AD /* DIviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602B2D28DD81D00089C4AD /* DIviderView.swift */; };
 		39602B3028DD868B0089C4AD /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39602B2F28DD868B0089C4AD /* Roboto.ttf */; };
+		39DE6BEA28E55162008D4B16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39DE6BE928E55162008D4B16 /* GoogleService-Info.plist */; };
 		FE4B562CA9798EFA58E745FC /* Pods_MealChoi_v4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC8A3CDDD600B68898D4A31 /* Pods_MealChoi_v4.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		39602AEB28DD7C250089C4AD /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		39602AED28DD7C280089C4AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39602AF028DD7C280089C4AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		39602AF728DD7CC40089C4AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		39602AFC28DD7E470089C4AD /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		39602AFE28DD7F640089C4AD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		39602B0028DD7F890089C4AD /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
@@ -52,7 +50,6 @@
 		39602B0528DD7FD20089C4AD /* NovaOval.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NovaOval.ttf; sourceTree = "<group>"; };
 		39602B0728DD80160089C4AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		39602B0828DD805F0089C4AD /* DiningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningModel.swift; sourceTree = "<group>"; };
-		39602B0A28DD80680089C4AD /* EtcModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcModel.swift; sourceTree = "<group>"; };
 		39602B1328DD81270089C4AD /* DLMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLMainView.swift; sourceTree = "<group>"; };
 		39602B1528DD81400089C4AD /* DLHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLHeaderView.swift; sourceTree = "<group>"; };
 		39602B1728DD814A0089C4AD /* DLRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLRowView.swift; sourceTree = "<group>"; };
@@ -68,6 +65,7 @@
 		39602B2B28DD81C30089C4AD /* WaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingView.swift; sourceTree = "<group>"; };
 		39602B2D28DD81D00089C4AD /* DIviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIviderView.swift; sourceTree = "<group>"; };
 		39602B2F28DD868B0089C4AD /* Roboto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Roboto.ttf; sourceTree = "<group>"; };
+		39DE6BE928E55162008D4B16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE5811B49E8A7692DB137E97 /* Pods-MealChoi-v4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealChoi-v4.debug.xcconfig"; path = "Target Support Files/Pods-MealChoi-v4/Pods-MealChoi-v4.debug.xcconfig"; sourceTree = "<group>"; };
 		E874F94ACCC090F339E7FB99 /* Pods-MealChoi-v4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealChoi-v4.release.xcconfig"; path = "Target Support Files/Pods-MealChoi-v4/Pods-MealChoi-v4.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +108,7 @@
 				39602AFB28DD7DF80089C4AD /* View */,
 				39602AFA28DD7DF20089C4AD /* ViewModel */,
 				39602AF928DD7DEB0089C4AD /* Helper */,
-				39602AF728DD7CC40089C4AD /* GoogleService-Info.plist */,
+				39DE6BE928E55162008D4B16 /* GoogleService-Info.plist */,
 				39602AED28DD7C280089C4AD /* Assets.xcassets */,
 				39602AEF28DD7C280089C4AD /* Preview Content */,
 			);
@@ -140,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				39602B0828DD805F0089C4AD /* DiningModel.swift */,
-				39602B0A28DD80680089C4AD /* EtcModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -299,7 +296,7 @@
 				39602B0628DD7FD20089C4AD /* NovaOval.ttf in Resources */,
 				39602B0428DD7FC90089C4AD /* Montserrat.ttf in Resources */,
 				39602AEE28DD7C280089C4AD /* Assets.xcassets in Resources */,
-				39602AF828DD7CC40089C4AD /* GoogleService-Info.plist in Resources */,
+				39DE6BEA28E55162008D4B16 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +354,6 @@
 				39602B2A28DD81B80089C4AD /* SMAboutView.swift in Sources */,
 				39602B2E28DD81D00089C4AD /* DIviderView.swift in Sources */,
 				39602B1A28DD81570089C4AD /* MLMainView.swift in Sources */,
-				39602B0B28DD80680089C4AD /* EtcModel.swift in Sources */,
 				39602B2628DD81A40089C4AD /* SMMainView.swift in Sources */,
 				39602B2C28DD81C30089C4AD /* WaitingView.swift in Sources */,
 				39602B1828DD814A0089C4AD /* DLRowView.swift in Sources */,
