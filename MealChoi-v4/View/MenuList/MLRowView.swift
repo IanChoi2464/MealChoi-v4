@@ -7,10 +7,13 @@ struct MLRowView:View{
     var menuInfos:Dictionary<String,Any>
     var body:some View{
         VStack(alignment:.leading){
-            let menuInfo=menuInfos[menu] as? Dictionary<String,Any> ?? ["":""]
+            let menuInfo=menuInfos[menu] as? Dictionary<String,Any> ?? ["noInfo":true]
+            let noInfo=menuInfo["noInfo"] as? Bool ?? false
             Button{
-                showDetails=true
-                whichMenu=menu
+                if(!noInfo){
+                    showDetails=true
+                    whichMenu=menu
+                }
             }label:{
                 HStack{
                     Text(menu)
