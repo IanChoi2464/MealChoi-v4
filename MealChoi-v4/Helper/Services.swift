@@ -59,6 +59,6 @@ class Services{
         if(c){count+=1}
         if(d){count+=1}
         if(e){count+=1}
-        return 130+35*count
+        return 110+35*count
     }
 }
