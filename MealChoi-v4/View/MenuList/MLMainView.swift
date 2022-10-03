@@ -15,11 +15,13 @@ struct MLMainView:View{
                 Text("Sorry, menu information is not provided.")
                     .font(Font.custom("Montserrat",size:20))
                     .navigationBarTitle(diningName)
+                    .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
             }
             else{
                 Text("Closed Today")
                     .font(Font.custom("Montserrat",size:20))
                     .navigationBarTitle(diningName)
+                    .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
             }
         }
         else{

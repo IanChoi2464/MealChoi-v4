@@ -32,6 +32,7 @@
 		39602B2C28DD81C30089C4AD /* WaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602B2B28DD81C30089C4AD /* WaitingView.swift */; };
 		39602B2E28DD81D00089C4AD /* DIviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39602B2D28DD81D00089C4AD /* DIviderView.swift */; };
 		39602B3028DD868B0089C4AD /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39602B2F28DD868B0089C4AD /* Roboto.ttf */; };
+		3960449A28E96354006DD75A /* Managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3960449928E96354006DD75A /* Managers.swift */; };
 		398F49EE28E7BD7C00FA78FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 398F49ED28E7BD7C00FA78FA /* GoogleService-Info.plist */; };
 		FE4B562CA9798EFA58E745FC /* Pods_MealChoi_v4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC8A3CDDD600B68898D4A31 /* Pods_MealChoi_v4.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		39602B2B28DD81C30089C4AD /* WaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingView.swift; sourceTree = "<group>"; };
 		39602B2D28DD81D00089C4AD /* DIviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIviderView.swift; sourceTree = "<group>"; };
 		39602B2F28DD868B0089C4AD /* Roboto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Roboto.ttf; sourceTree = "<group>"; };
+		3960449928E96354006DD75A /* Managers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers.swift; sourceTree = "<group>"; };
 		398F49ED28E7BD7C00FA78FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE5811B49E8A7692DB137E97 /* Pods-MealChoi-v4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealChoi-v4.debug.xcconfig"; path = "Target Support Files/Pods-MealChoi-v4/Pods-MealChoi-v4.debug.xcconfig"; sourceTree = "<group>"; };
 		E874F94ACCC090F339E7FB99 /* Pods-MealChoi-v4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealChoi-v4.release.xcconfig"; path = "Target Support Files/Pods-MealChoi-v4/Pods-MealChoi-v4.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				39602AE928DD7C250089C4AD /* MealChoi_v4App.swift */,
 				39602AFB28DD7DF80089C4AD /* View */,
 				39602AFA28DD7DF20089C4AD /* ViewModel */,
+				3960449628E95F55006DD75A /* Model */,
 				39602AF928DD7DEB0089C4AD /* Helper */,
 				398F49ED28E7BD7C00FA78FA /* GoogleService-Info.plist */,
 				39602AED28DD7C280089C4AD /* Assets.xcassets */,
@@ -128,6 +131,7 @@
 			children = (
 				39602AFC28DD7E470089C4AD /* Services.swift */,
 				39602AFE28DD7F640089C4AD /* Extensions.swift */,
+				3960449928E96354006DD75A /* Managers.swift */,
 				39602B0028DD7F890089C4AD /* Styles.swift */,
 				39602B0228DD7F980089C4AD /* Fonts */,
 			);
@@ -212,6 +216,13 @@
 				39602B1F28DD817A0089C4AD /* MLRowView.swift */,
 			);
 			path = MenuList;
+			sourceTree = "<group>";
+		};
+		3960449628E95F55006DD75A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		618BD3F0BE54ACD2BB2E99FA /* Pods */ = {
@@ -351,6 +362,7 @@
 			files = (
 				39602B2428DD81940089C4AD /* MDIconView.swift in Sources */,
 				39602B1C28DD81620089C4AD /* MLStationView.swift in Sources */,
+				3960449A28E96354006DD75A /* Managers.swift in Sources */,
 				39602B2A28DD81B80089C4AD /* SMAboutView.swift in Sources */,
 				39602B2E28DD81D00089C4AD /* DIviderView.swift in Sources */,
 				39602B1A28DD81570089C4AD /* MLMainView.swift in Sources */,
