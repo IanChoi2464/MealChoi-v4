@@ -12,28 +12,52 @@ struct MLMainView:View{
     var menuInfos:Dictionary<String,Any>
     var diningName:String
     var body:some View{
-        let numOfMeals=today["numOfMeals"] as? Int ?? 0
-        let infoNotProvided=today["infoNotProvided"] as? Bool ?? false
-        if(numOfMeals==0){
-            if(infoNotProvided){
-                Text("Sorry, menu information is not provided.")
-                    .font(Font.custom("Montserrat",size:20))
-                    .navigationBarTitle(diningName)
-                    .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
+        GeometryReader{proxy in
+            let screenSize=proxy.size
+            let numOfMeals=today["numOfMeals"] as? Int ?? 0
+            let mealArray=Services.getArray(numOfMeals:numOfMeals)
+            let infoNotProvided=today["infoNotProvided"] as? Bool ?? false
+            if(numOfMeals==0){
+                if(infoNotProvided){
+                    VStack{
+                        DynamicTabHeader(mealArray:mealArray,size:screenSize)
+                            .offsetX{value in
+                                if(value>0){
+                                    isEntered=false
+                                }
+                                else{
+                                    isEntered=true
+                                }
+                            }
+                        Spacer()
+                        Text("Sorry, menu information is not provided.")
+                            .font(Font.custom("Montserrat",size:20))
+                        Spacer()
+                    }
+                    .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
+                }
+                else{
+                    VStack{
+                        DynamicTabHeader(mealArray:mealArray,size:screenSize)
+                            .offsetX{value in
+                                if(value>0){
+                                    isEntered=false
+                                }
+                                else{
+                                    isEntered=true
+                                }
+                            }
+                        Spacer()
+                        Text("Closed Today")
+                            .font(Font.custom("Montserrat",size:20))
+                        Spacer()
+                    }
+                    .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
+                }
             }
             else{
-                Text("Closed Today")
-                    .font(Font.custom("Montserrat",size:20))
-                    .navigationBarTitle(diningName)
-                    .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
-            }
-        }
-        else{
-            ZStack{
-                GeometryReader{proxy in
-                    let screenSize=proxy.size
+                ZStack{
                     VStack{
-                        let mealArray=Services.getArray(numOfMeals:numOfMeals)
                         DynamicTabHeader(mealArray:mealArray,size:screenSize)
                             .offsetX{value in
                                 if(value>0){
@@ -72,16 +96,16 @@ struct MLMainView:View{
                         .onAppear(perform:gestureManager.addGesture)
                         .onDisappear(perform:gestureManager.removeGesture)
                     }
+                    let menuInfo=menuInfos[whichMenu] as? Dictionary<String,Any> ?? ["":""]
+                    let showGf=menuInfo["gf"] as? Bool ?? false
+                    let showHal=menuInfo["hal"] as? Bool ?? false
+                    let showVegan=menuInfo["vegan"] as? Bool ?? false
+                    let showVegetarian=menuInfo["vegetarian"] as? Bool ?? false
+                    let curHeight=Services.getHeight(a:showGf,b:showHal,c:showVegan,d:showVegetarian)
+                    MDMainView(isShowing:$showDetails,whichMenu:whichMenu,showGf:showGf,showHal:showHal,showVegan:showVegan,showVegetarian:showVegetarian,curHeight:curHeight)
                 }
-                let menuInfo=menuInfos[whichMenu] as? Dictionary<String,Any> ?? ["":""]
-                let showGf=menuInfo["gf"] as? Bool ?? false
-                let showHal=menuInfo["hal"] as? Bool ?? false
-                let showVegan=menuInfo["vegan"] as? Bool ?? false
-                let showVegetarian=menuInfo["vegetarian"] as? Bool ?? false
-                let curHeight=Services.getHeight(a:showGf,b:showHal,c:showVegan,d:showVegetarian)
-                MDMainView(isShowing:$showDetails,whichMenu:whichMenu,showGf:showGf,showHal:showHal,showVegan:showVegan,showVegetarian:showVegetarian,curHeight:curHeight)
+                .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
             }
-            .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
         }
     }
     
