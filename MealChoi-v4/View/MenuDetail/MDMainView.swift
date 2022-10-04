@@ -7,7 +7,6 @@ struct MDMainView:View{
     let showHal:Bool
     let showVegan:Bool
     let showVegetarian:Bool
-    let showBal:Bool
     let curHeight:CGFloat
     var body:some View{
         ZStack(alignment:.bottom){
@@ -42,9 +41,6 @@ struct MDMainView:View{
             }
             if(showVegetarian){
                 MDIconView(icon:"Vegetarian")
-            }
-            if(showBal){
-                MDIconView(icon:"Balanced Nutrients")
             }
             Spacer()
         }

@@ -52,13 +52,12 @@ class Services{
         }
     }
     
-    static func getHeight(a:Bool,b:Bool,c:Bool,d:Bool,e:Bool)->CGFloat{
+    static func getHeight(a:Bool,b:Bool,c:Bool,d:Bool)->CGFloat{
         var count:CGFloat=0
         if(a){count+=1}
         if(b){count+=1}
         if(c){count+=1}
         if(d){count+=1}
-        if(e){count+=1}
         return 110+35*count
     }
     

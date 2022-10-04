@@ -69,9 +69,8 @@ struct MLMainView:View{
                 let showHal=menuInfo["hal"] as? Bool ?? false
                 let showVegan=menuInfo["vegan"] as? Bool ?? false
                 let showVegetarian=menuInfo["vegetarian"] as? Bool ?? false
-                let showBal=menuInfo["bal"] as? Bool ?? false
-                let curHeight=Services.getHeight(a:showGf,b:showHal,c:showVegan,d:showVegetarian,e:showBal)
-                MDMainView(isShowing:$showDetails,whichMenu:whichMenu,showGf:showGf,showHal:showHal,showVegan:showVegan,showVegetarian:showVegetarian,showBal:showBal,curHeight:curHeight)
+                let curHeight=Services.getHeight(a:showGf,b:showHal,c:showVegan,d:showVegetarian)
+                MDMainView(isShowing:$showDetails,whichMenu:whichMenu,showGf:showGf,showHal:showHal,showVegan:showVegan,showVegetarian:showVegetarian,curHeight:curHeight)
             }
         }
     }

@@ -41,11 +41,6 @@ struct MLRowView:View{
                                 .resizable()
                                 .frame(width:35,height:35)
                         }
-                        if(menuInfo["bal"] as? Bool ?? false){
-                            Image("Balanced Nutrients")
-                                .resizable()
-                                .frame(width:35,height:35)
-                        }
                     }
                     .padding(.trailing,10)
                 }
