@@ -8,7 +8,7 @@ struct DLMainView:View{
             ZStack{
                 VStack(alignment:.leading,spacing:0){
                     DLHeaderView(showSideMenu:$showSideMenu)
-                    ScrollView{
+                    ScrollView(showsIndicators:false){
                         LazyVStack{
                             ForEach(model1.dinings.indices,id:\.self){index in
                                 let diningName=model1.dinings[index]["name"] as! String

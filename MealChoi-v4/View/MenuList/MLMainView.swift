@@ -72,6 +72,7 @@ struct MLMainView:View{
                 let curHeight=Services.getHeight(a:showGf,b:showHal,c:showVegan,d:showVegetarian)
                 MDMainView(isShowing:$showDetails,whichMenu:whichMenu,showGf:showGf,showHal:showHal,showVegan:showVegan,showVegetarian:showVegetarian,curHeight:curHeight)
             }
+            .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
         }
     }
     
