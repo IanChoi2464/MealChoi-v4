@@ -61,4 +61,10 @@ class Services{
         if(e){count+=1}
         return 110+35*count
     }
+    
+    static func getArray(numOfMeals:Int)->Array<String>{
+        if(numOfMeals==3){return ["Breakfast","Lunch","Dinner"]}
+        if(numOfMeals==2){return ["Brunch","Dinner"]}
+        return ["Daily"]
+    }
 }
