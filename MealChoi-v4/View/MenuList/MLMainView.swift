@@ -4,6 +4,7 @@ struct MLMainView:View{
     @StateObject var gestureManager:InteractionManager = .init()
     @State var offset:CGFloat=0
     @State var isTapped:Bool=false
+    @State var isEntered:Bool=true
     @State var mealTime:String
     @State var showDetails=false
     @State var whichMenu=""
@@ -34,6 +35,14 @@ struct MLMainView:View{
                     VStack{
                         let mealArray=Services.getArray(numOfMeals:numOfMeals)
                         DynamicTabHeader(mealArray:mealArray,size:screenSize)
+                            .offsetX{value in
+                                if(value>0){
+                                    isEntered=false
+                                }
+                                else{
+                                    isEntered=true
+                                }
+                            }
                         TabView(selection:$mealTime){
                             ForEach(mealArray,id:\.self){tmp in
                                 let meal=today[tmp.lowercased()] as! Dictionary<String,Any>
@@ -45,7 +54,7 @@ struct MLMainView:View{
                                     }
                                 }
                                 .offsetX{value in
-                                    if(mealTime==tmp && !isTapped){
+                                    if(mealTime==tmp && !isTapped && isEntered){
                                         offset=value-(screenSize.width*CGFloat(indexOf(mealArray:mealArray,tmp:tmp)))
                                     }
                                     if(value==0&&isTapped){
