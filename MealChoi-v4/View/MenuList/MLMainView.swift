@@ -124,6 +124,7 @@ struct MLMainView:View{
                         .foregroundColor(.white)
                 }
             }
+            
             .overlay(alignment:.leading){
                 Capsule()
                     .fill(.white)
@@ -150,7 +151,7 @@ struct MLMainView:View{
                         }
                         .frame(width:size.width-30)
                     })
-                    .frame(width:(size.width-30)/CGFloat(mealArray.count))
+                    .frame(width:(mealArray.count>0) ? (size.width-30)/CGFloat(mealArray.count):0)
                     .mask({
                         Capsule()
                     })
