@@ -13,7 +13,6 @@ struct DLMainView:View{
                             ForEach(model1.dinings.indices,id:\.self){index in
                                 let diningName=model1.dinings[index]["name"] as! String
                                 let menuInfos=model1.dinings[index]["menuInfos"] as? Dictionary<String,Any> ?? ["":""]
-                                //let today=model1.dinings[index]["221001"] as! Dictionary<String,Any>
                                 let today=model1.dinings[index][Services.getDate_str(date:Date(),format:"yyMMdd")] as! Dictionary<String,Any>
                                 let mealTime=Services.getMealTime(numOfMeals:today["numOfMeals"] as? Int ?? 0)
                                 let openHours=today["openHours"] as? [String] ?? ["Closed Today"]
